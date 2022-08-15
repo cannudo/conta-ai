@@ -9,3 +9,5 @@ class Lancamento(models.Model):
 
     def __str__(self):
         return ("+" if self.entrada else "-")
+
+    # TODO: Arrumar esse str e pesquisar sobre o max_digits do DecimalField
