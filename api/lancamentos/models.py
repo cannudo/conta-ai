@@ -8,6 +8,6 @@ class Lancamento(models.Model):
     valor = models.DecimalField(decimal_places = 2, max_digits = 10)
 
     def __str__(self):
-        return ("+" if self.entrada else "-")
+        return (("Entrada de" if self.entrada else "Saída de") + " R$ " + str(self.valor) + " — " + self.titulo + ": " + self.descricao)
 
     # TODO: Arrumar esse str e pesquisar sobre o max_digits do DecimalField
