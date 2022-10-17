@@ -14,8 +14,8 @@ Estas instruções permitem que você obtenha uma cópia local do projeto e o co
 
 Para baixar, compilar e executar o projeto em seu computador, você deve ter instalado:
 
-- Sistema de controle de versões [https://www.git-scm.com/](git);
-- Kit de Desenvolvimento [https://www.python.org/](Python) (versão 3), com o gerenciador de pacotes pip.
+- Sistema de controle de versões [git](https://www.git-scm.com/);
+- Kit de Desenvolvimento [Python](https://www.python.org/) (versão 3), com o gerenciador de pacotes pip.
 
 ### Cópia local do sistema
 
