@@ -32,14 +32,20 @@ O diretório acima hospeda o núcleo do sistema.
 ### Banco de dados local
 Para que o sistema funcione corretamente, é preciso criar um banco de dados local. Para isso, rode o seguinte comando na linha de comandos do seu computador:
 ```
-python3 conta-ai/api/manage.py migrate
+python3 manage.py migrate
+```
+
+#### [OPICIONAL] Superusuário para interface administrativa
+Para que o desenvolvedor use uma interface administrativa do sistema, terá que criar um superusuário. Para isso, após realizadas todas as instruções anteriores, rode o seguinte comando em um terminal:
+```
+python3 manage.py createsuperuser
 ```
 
 ### Executar em modo desenvolvimento
 
 Para executar o sistema em modo de desenvolvimento, rode o seguinte comando na linha de comandos do seu computador:
 ```
-python conta-ai/api/manage.py migrate
+python3 manage.py runserver
 ```
 
 ## Equipe de desenvolvimento
