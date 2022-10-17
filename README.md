@@ -27,7 +27,7 @@ A partir deste ponto, este arquivo assume que os terminais CLIs estejam em opera
 
 `conta-ai/api/`
 
-Esse diretório se trata do core do sistema
+O diretório acima hospeda o núcleo do sistema.
 
 ### Banco de dados local
 Para que o sistema funcione corretamente, é preciso criar um banco de dados local. Para isso, rode o seguinte comando na linha de comandos do seu computador:
