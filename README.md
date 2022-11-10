@@ -3,7 +3,7 @@ Registro de fluxo de caixa para pequenos comerciantes
 
 
 ``
-O CONTA[AI] é um sistema que auxilia no registro do fluxo de caixa de pequenos comerciantes. Atualmente, em testes e em elaboração.
+O CONTA[AI] é um sistema que auxilia no registro do fluxo de caixa de pequenos comerciantes. Atualmente, o sistema está em fase de testes.
 ``
 
 ## Início
@@ -29,6 +29,33 @@ A partir deste ponto, este arquivo assume que os terminais CLIs estejam em opera
 
 O diretório acima hospeda o núcleo do sistema.
 
+### Criar ambiente de desenvolvimento
+Para que o sistema não entre em conflito com outros processos do próprio sistema operacional, recomenda-se que você crie um ambiente de desenvolvimento virtual Python. Rodando o comando abaixo, você terá uma nova instalação Python dedicada ao desenvolvimento do conta-ai.
+```
+python3 -m venv <nome-da-venv>
+```
+
+substituindo `<nome-da-venv>` pelo nomem que você deseja para o ambiente virtual.
+
+#### Ativar novo ambiente
+Para ativar o novo ambiente, você terá que rodar um script chammado `activate`. Para isso, rode o seguinte comando:
+```
+./<nome-da-venv>/bin/activate
+```
+
+#### Desativar novo ambiente
+Para desativar o novo ambiente, simplesmente rode:
+```
+deactivate
+```
+
+### Dependências
+Para que o sistema funcione corretamente, é preciso instalar as dependências Python, com o pip.
+Para isso, rode o seguinte comando:
+```
+pip install -r requirements.txt
+```
+
 ### Banco de dados local
 Para que o sistema funcione corretamente, é preciso criar um banco de dados local. Para isso, rode o seguinte comando na linha de comandos do seu computador:
 ```
@@ -50,7 +77,7 @@ Para executar o sistema em modo de desenvolvimento, rode o seguinte comando na l
 python3 manage.py runserver
 ```
 
-Em caso de problemas ao executar o servidor, certifique-se de que não esqueceu de seguir nenhum passo descrito neste documento. Ao persistirem os erros, consulte a documentação do [Django](https://www.djangoproject.com/)
+Em caso de problemas ao executar o servidor, certifique-se de que não esqueceu de seguir nenhum passo descrito neste documento. Ao persistirem os erros, consulte a documentação do [Django](https://www.djangoproject.com/) ou descreva seu problema através de uma [issue](https://github.com/cannudo/conta-ai/issues).
 
 ## Equipe de desenvolvimento
 
