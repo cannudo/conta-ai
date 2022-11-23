@@ -51,16 +51,24 @@ deactivate
 
 ### Dependências
 Para que o sistema funcione corretamente, é preciso instalar as dependências Python, com o pip.
-Para isso, rode o seguinte comando:
+Para isso, com o ambiente virtual ativado, rode o seguinte comando:
 ```
 pip install -r requirements.txt
 ```
 
 ### Banco de dados local
-Para que o sistema funcione corretamente, é preciso criar um banco de dados local. Para isso, rode o seguinte comando na linha de comandos do seu computador:
+Para que o sistema funcione corretamente, é preciso criar um banco de dados local. Para isso, com o ambiente virtual ativado, rode o seguinte comando na linha de comandos do seu computador:
 ```
 python3 manage.py migrate
 ```
+
+### Testando o sistema
+Para conferir se o sistema roda normalmente nas situações previstas pelos requisitos, desenvolvemos alguns testes automatizados. Para rodá-los, com o ambiente virtual ativado, rode o seguinte comando:
+```
+python3 manage.py test
+```
+
+O retorno deve informar que está tudo OK. Se os testes não derem OK, provavelmente você esqueceu de algum comando acima ou modificou alguma coisa no software.
 
 #### [OPICIONAL] Superusuário para interface administrativa
 Para que o desenvolvedor use uma interface administrativa do sistema, terá que criar um superusuário. Para isso, após realizadas todas as instruções anteriores, rode o seguinte comando na linha de comandos:
@@ -78,6 +86,7 @@ python3 manage.py runserver
 ```
 
 Em caso de problemas ao executar o servidor, certifique-se de que não esqueceu de seguir nenhum passo descrito neste documento. Ao persistirem os erros, consulte a documentação do [Django](https://www.djangoproject.com/) ou descreva seu problema através de uma [issue](https://github.com/cannudo/conta-ai/issues).
+
 
 ## Equipe de desenvolvimento
 
