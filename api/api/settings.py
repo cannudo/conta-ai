@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'movimentacao',
     'lancamentos',
     'fluxodecaixa',
+    'relatorio',
 ]
 
 MIDDLEWARE = [
