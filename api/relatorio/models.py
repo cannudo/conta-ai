@@ -6,3 +6,6 @@ class Relatorio(models.Model):
      descricao = models.CharField(max_length = 35)
      data = models.DateField()
      movimentacoes = models.ManyToManyField('movimentacao.Movimentacao')
+
+     def __str__(self):
+          return self.descricao
