@@ -8,4 +8,14 @@ class Relatorio(models.Model):
      movimentacoes = models.ManyToManyField('movimentacao.Movimentacao')
 
      def __str__(self):
-          return self.descricao
+          output = f'Relatório do dia {self.data.day}/{self.data.month}/{self.data.year}: {self.descricao}'
+          return output
+
+'''
+     É provável que este modelo mude, para que
+     só tenha dados relacionados à movimentações
+     de um único dia.
+
+     Atualmente, os relatórios podem arquivar
+     movimentações de diferentes dias.
+'''
