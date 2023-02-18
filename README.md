@@ -35,7 +35,7 @@ Para que o sistema não entre em conflito com outros processos do próprio siste
 python3 -m venv <nome-da-venv>
 ```
 
-substituindo `<nome-da-venv>` pelo nomem que você deseja para o ambiente virtual.
+substituindo `<nome-da-venv>` pelo nome que você deseja para o ambiente virtual.
 
 #### Ativar novo ambiente
 Para ativar o novo ambiente, você terá que rodar um script chammado `activate`. Para isso, rode o seguinte comando:
@@ -71,7 +71,7 @@ python3 manage.py test
 O retorno deve informar que está tudo OK. Se os testes não derem OK, provavelmente você esqueceu de algum comando acima ou modificou alguma coisa no software.
 
 #### [OPICIONAL] Superusuário para interface administrativa
-Para que o desenvolvedor use uma interface administrativa do sistema, terá que criar um superusuário. Para isso, após realizadas todas as instruções anteriores, rode o seguinte comando na linha de comandos:
+Para que o desenvolvedor use uma interface administrativa do sistema, terá que criar um superusuário. Para isso, após realizadas todas as instruções anteriores (e com o ambiente virtual ativado), rode o seguinte comando na linha de comandos:
 ```
 python3 manage.py createsuperuser
 ```
@@ -80,7 +80,7 @@ O terminal guiará o desenvolvedor através dos passos necessários para a cria�
 
 ### Executar o servidor em modo desenvolvimento
 
-Para executar o sistema em modo de desenvolvimento, rode o seguinte comando na linha de comandos do seu computador:
+Para executar o sistema em modo de desenvolvimento, com o ambiente virtual ativado, rode o seguinte comando na linha de comandos do seu computador:
 ```
 python3 manage.py runserver
 ```
