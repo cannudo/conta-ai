@@ -27,20 +27,85 @@ As movimentações são registros de entradas ou saídas monetárias em determin
 
 Os fluxos de caixa são coleções de movimentações, tendo um título e uma descrição. Na API, eles ficam expostos em /api/fluxosdecaixa/.
 
+## Permissão
+
+Para que a API permita que você obtenha um token, você precisa ter um usuário Django válido. Para conferir se você já tem um, faça uma requisição POST para /auth/signup/, com o seguinte corpo:
+
+```json
+{
+    "username": "<seu-nome-de-usuario-django>",
+    "password": "<a-senha-deste-usuario>",
+    "email": "<o-email-do-usuario>",
+    "first_name": "<primeiro-nome-do-usuario>",
+    "last_name": "<ultimo-nome-do-usuario>"
+}
+```
+
+O objetivo desta requisição é criar um usuário Django.
+
+### Sucesso
+
+Se a resposta vier com um código 201, significa que o usuário Django foi criado. O corpo da resposta deve ter essa estrutura:
+
+```json
+{
+    "username": "<seu-nome-de-usuario-django>",
+    "password": "<a-senha-deste-usuario>",
+    "email": "<o-email-do-usuario>",
+    "first_name": "<primeiro-nome-do-usuario>",
+    "last_name": "<ultimo-nome-do-usuario>"
+}
+```
+
+### Falha
+
+Se a resposta vier com um código 400, significa que o usuário Django já existe. Portanto, você já pode se autenticar e pegar um token.
+
+Para seguir para a autenticação, você precisará dos seguintes dados validados: 
+
+```json
+{
+    "username": "<seu-nome-de-usuario-django>",
+    "password": "<a-senha-deste-usuario>"
+}
+```
+
 ## Autenticação
 
 Para obter acesso aos dados que a API expõe, note que é importante se identificar. Dessa forma, o servidor consegue determinar se você tem autorização para acessar os recursos ou não.
 
-Para se autenticar, faça uma requisição POST para /api-auth-token/. No corpo da requisição, coloque o seguinte arquivo JSON:
+Para se autenticar, faça uma requisição POST para /auth/token/. No corpo da requisição, coloque o seguinte arquivo JSON:
 
 ```json
 {
-    "username": "<your-django-username>",
-    "password": "<your-django-password>"
+    "username": "<seu-nome-de-usuario-django>",
+    "password": "<a-senha-deste-usuario>"
 }
 ```
 
-Note que você precisa registrar um usuário Django antes de fazer a requisição, caso contrário, você receberá um erro 401.
+### Sucesso
+
+Em caso de sucesso, a API deve retornar uma resposta 200, com o seguinte corpo:
+
+```json
+{
+    "token": "<token-gerado>"
+}
+```
+
+Isto é: existe um usuário válido com os dados recebidos pelo servidor. Portanto, a API responde com um token. Este token deverá estar presente nas requisições para os endpoints.
+
+### Falha
+
+Em caso de falha, a API deve retornar uma resposta 400, com o seguinte corpo:
+
+```json
+{
+    "non_field_errors": [
+        "Impossível fazer login com as credenciais fornecidas."
+    ]
+}
+```
 
 ## Recursos e endpoints
 
