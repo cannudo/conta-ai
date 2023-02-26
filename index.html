@@ -15,6 +15,8 @@
             <input v-model="senha" type="password" id="senha" name="senha">
             <button>Logar</button>
         </form>
+
+        <p>Logado? {{ logado }}</p>
     </main>
 
 
@@ -24,7 +26,8 @@
 				return {
 					message: 'Este é um exemplo de mensagem do Vue',
                     usuario: 'luan',
-                    senha: 'luan'
+                    senha: 'luan',
+                    logado: false
 				}
 			},
             methods: {
@@ -40,7 +43,11 @@
                             username: this.usuario,
                             password: this.senha
                         })
-                    })
+                    }).then((response => {
+                        if(response.ok) {
+                            this.logado = true
+                        }
+                    }))
                 } catch(error) {
                     console.log(error)
                 }
