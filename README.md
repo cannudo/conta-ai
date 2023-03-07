@@ -6,6 +6,10 @@ Registro de fluxo de caixa para pequenos comerciantes
 O CONTA[AI] é um sistema que auxilia no registro do fluxo de caixa de pequenos comerciantes. Atualmente, o sistema está em fase de testes.
 ``
 
+## Assets
+
+Para tentar agilizar o processo de desenvolvimento, há uma série de scripts na pasta [assets/scripts/](assets/scripts/) que automatizam algumas tarefas comuns ao ambiente de desenvolvimento.
+
 ## Início
 
 Estas instruções permitem que você obtenha uma cópia local do projeto e o configure em seu computador para desenvolvimento e testes. Elas assumem que o sistema operacional hospedeiro seja uma distribuição GNU/Linux, portanto, os comandos podem ter pequenas variações caso o sistema seja hospedado em um servidor baseado em outro sistema operacional.
