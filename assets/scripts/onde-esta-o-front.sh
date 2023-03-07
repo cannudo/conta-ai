@@ -1,0 +1,1 @@
+echo "O front está em https://github.com/cannudo/conta-ai-frontend"
