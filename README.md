@@ -6,9 +6,12 @@ Registro de fluxo de caixa para pequenos comerciantes
 O CONTA[AI] é um sistema que auxilia no registro do fluxo de caixa de pequenos comerciantes. Atualmente, o sistema está em fase de testes.
 ``
 
-## Assets
+## Início rápido
+Para tentar agilizar o processo de execução do projeto, há a possibilidade de executar o script [ativar-servidor.sh](assets/scripts/ativar-servidor.sh). Ele tenta instalar as dependências do projeto e iniciar o servidor.
 
-Para tentar agilizar o processo de desenvolvimento, há uma série de scripts na pasta [assets/scripts/](assets/scripts/) que automatizam algumas tarefas comuns ao ambiente de desenvolvimento.
+O script assume que o host hospedeiro tenha `python3` instalado, com a possibilidade de criar virtualenvs e instalar pacotes pelo pip.
+
+Lembre-se que a execução desse script não substitui a leitura da documentação.
 
 ## Início
 
